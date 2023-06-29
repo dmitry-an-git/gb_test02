@@ -19,7 +19,8 @@ public abstract class Toy {
         return name;
     }
 
-    public String getInfo() {
+    @Override
+    public String toString() {
         return String.format("Toy: %s, ID: %d\n",this.name, this.id);
     } 
     

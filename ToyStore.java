@@ -1,17 +1,34 @@
-import java.util.PriorityQueue;
-import toys.Toy;
-import batch.Batch;
+
+import java.util.LinkedList;
+import java.util.Random;
+import toys.*;
+
+
 
 public class ToyStore {
-    private PriorityQueue<Batch> storage;
+    private LinkedList<Toy> storage;
+    private Random random;
 
     public ToyStore(int bears, int cars, int dolls) {
-        this.storage = new PriorityQueue<>();
+        this.storage = new LinkedList<>();
 
-        for i in range 
+        for (int i = 0; i < bears; i++) {
+            storage.add(new ToyBear());
+        }
+
+        for (int i = 0; i < cars; i++) {
+            storage.add(new ToyCar());
+        }
+
+        for (int i = 0; i < dolls; i++) {
+            storage.add(new ToyDoll());
+        }
     }
 
-    public void addBatch(Batch batch) {
-        this.storage.add(batch);
+    public Toy playToy() {
+        this.random = new Random();
+        int index = random.nextInt(storage.size());
+        Toy prize = storage.remove(index);
+        return prize;
     }
 }
