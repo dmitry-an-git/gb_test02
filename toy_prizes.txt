@@ -1,19 +1,19 @@
 Toy: Teddy Bear, ID: 2
-Toy: Doll, ID: 5
-Toy: Car, ID: 3
-Toy: Car, ID: 4
 Toy: Teddy Bear, ID: 1
-Toy: Doll, ID: 6
-Toy: Doll, ID: 6
-Toy: Teddy Bear, ID: 2
-Toy: Doll, ID: 6
 Toy: Doll, ID: 5
+Toy: Car, ID: 4
+Toy: Doll, ID: 6
+Toy: Car, ID: 3
 Toy: Car, ID: 3
 Toy: Teddy Bear, ID: 1
-Toy: Car, ID: 4
 Toy: Doll, ID: 5
-Toy: Car, ID: 4
+Toy: Teddy Bear, ID: 2
 Toy: Doll, ID: 6
+Toy: Car, ID: 4
 Toy: Teddy Bear, ID: 1
 Toy: Teddy Bear, ID: 2
+Toy: Car, ID: 3
+Toy: Car, ID: 4
+Toy: Doll, ID: 6
+Toy: Car, ID: 4
 Toy: Car, ID: 3

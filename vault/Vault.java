@@ -1,21 +1,22 @@
 package vault;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.util.LinkedList;
+import java.util.ArrayDeque;
+import java.util.Deque;
 
 import toys.*;
 
 public class Vault implements VaultModel {
     
-    private LinkedList<Toy> storage;
+    private Deque<Toy> storage; 
 
     public Vault() {
-        this.storage = new LinkedList<>();
+        this.storage = new ArrayDeque<>();
     }
 
     @Override
     public void newToy(Toy toy){
-        storage.add(toy);
+        storage.addLast(toy);
     }
 
     @Override
@@ -34,7 +35,7 @@ public class Vault implements VaultModel {
 
     @Override
     public Toy getToy() {
-        Toy toy = storage.removeFirst();
+        Toy toy = storage.pollFirst();
 
         String fileName = "toy_prizes.txt";
         try (FileWriter writer = new FileWriter(fileName, true)) {

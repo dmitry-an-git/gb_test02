@@ -19,7 +19,7 @@ public class Presenter implements View{
 
     @Override
     public void setToys() {
-        System.out.println("\nPlease enter the amounts of toys to be in the store:\n");
+        System.out.println("\nPlease enter the numbers of toys to be in the store:\n");
         System.out.printf("\tTeddy Bears: ");
         int bears = sc.nextInt();
         System.out.printf("\tToy Cars: ");
@@ -42,15 +42,14 @@ public class Presenter implements View{
         
         while (play) {
             step += 1;
-            System.out.printf("\t\tEnter 'y' to continue: ");
-            String selection = sc.next();
             if (model.getSize()==0) {
                 play = false;
-                System.out.println("\nThere are no more toys to play!");
+                System.out.println("\nThere are no more toys to play.");
             } else {
+                System.out.printf("\t\tEnter 'y' to continue: ");
+                String selection = sc.next();
                 if (!selection.equals("y") && !selection.equals("Y")) {
                     play = false;
-                    System.out.println("Bye!");
                 } else {
                     prize = model.playToy();
                     System.out.printf("\tStep %d: The next prize is a %s (id: %d).\n", step, prize.getName(), prize.getId());
@@ -69,13 +68,13 @@ public class Presenter implements View{
         System.out.printf("\tYou've got the first prize: %s (id: %d).\n", prize.getName(), prize.getId());
         boolean play = true;
         while (play) {
-            System.out.printf("\t\tEnter 'y' to continue: ");
-            String selection = sc.next();
             if (vault.getSize()==0) {
                 play = false;
                 System.out.println("\nThere are no more prizes left.");
                 System.out.println("Your toys are in the file.\nBye!\n");
             } else {
+                System.out.printf("\t\tEnter 'y' to continue: ");
+                String selection = sc.next();
                 if (!selection.equals("y") && !selection.equals("Y")) {
                     play = false;
                     System.out.println("Bye!");
