@@ -5,6 +5,12 @@ import java.util.Random;
 import toys.*;
 
 public class ToyStore implements Model{
+
+    /**
+     * based on a linked list with Toy objects
+     * can pick up some random Toy from the list (and remove it)
+     */
+
     private LinkedList<Toy> storage;
     private Random random;
 
